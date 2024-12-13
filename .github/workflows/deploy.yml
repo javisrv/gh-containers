@@ -2,14 +2,14 @@ name: Deployment (Container)
 on:
   push:
     branches:
-      - main
+      - master
       - dev
 env:
   CACHE_KEY: node-deps
   MONGODB_DB_NAME: gha-demo
 jobs:
   test:
-    environment: testing
+    environment: test
     runs-on: ubuntu-latest
     env:
       MONGODB_CONNECTION_PROTOCOL: mongodb+srv
